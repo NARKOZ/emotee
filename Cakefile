@@ -2,11 +2,11 @@
 {exec}  = require 'child_process'
 fs      = require 'fs'
 
-VERSION   = '1.0.0'
+VERSION   = '1.1.0'
 TIMESTAMP = Date.now()
 
 HEADER = """
-/* Copyright (c) 2011 Nihad Abbasov / mail@narkoz.me
+/* Copyright (c) 2011-2012 Nihad Abbasov / mail@narkoz.me
  *
  * Emotee v#{VERSION}, #{TIMESTAMP}
  * https://github.com/narkoz/emotee

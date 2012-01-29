@@ -5,7 +5,7 @@ with inspiration from http://twitter.com/emotebot
 
 # config
 c =
-  color: [ 'pink', 'gray', '#8888ff' ]
+  color: [ 'pink', 'gray', '#ffd300', 'red', 'blue', 'green', 'orange', 'black' ]
   head: [
     [ '(', ')' ],
     [ '|', '|' ],
@@ -71,11 +71,27 @@ c =
     [ '', ' ', '', '', 'o彡ﾟ' ]
   ]
 
+color = document.getElementById 'color'
 elem  = document.getElementById 'smilie'
 style = elem.style
 
 random      = (n)     -> Math.floor Math.random() * n
 randSelect  = (array) -> array[random(array.length)]
+
+window.restoreOptions = ->
+  i = 0
+  while i < color.children.length
+    if color[i].value is localStorage['color']
+      color[i].selected = 'true'
+      break
+    i++
+
+window.saveColor = ->
+  if color.value is 'default'
+    localStorage.removeItem 'color'
+  else
+    localStorage['color'] = color.value
+  generate()
 
 window.generate = ->
   head        = randSelect c.head
@@ -83,7 +99,7 @@ window.generate = ->
   cheeks      = randSelect c.cheeks
   mouth       = randSelect c.mouth
   hands       = randSelect c.hands
-  style.color = randSelect c.color
+  style.color = if localStorage['color'] then localStorage['color'] else randSelect c.color
 
   elem.textContent = [
     hands[0], head[0], hands[1] or (if hands[3] then '' else cheeks[0]), eyes[0], hands[2] or

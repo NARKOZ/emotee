@@ -1,6 +1,6 @@
 /* Copyright (c) 2011-2012 Nihad Abbasov / mail@narkoz.me
  *
- * Emotee v1.1.0, 1349710085707
+ * Emotee v1.2.0, 1349710784345
  * https://github.com/narkoz/emotee
  *
  * All rights reserved.

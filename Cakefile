@@ -2,7 +2,7 @@
 {exec}  = require 'child_process'
 fs      = require 'fs'
 
-VERSION   = '1.1.0'
+VERSION   = '1.2.0'
 TIMESTAMP = Date.now()
 
 HEADER = """

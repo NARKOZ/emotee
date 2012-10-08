@@ -1,6 +1,7 @@
 {
   "name": "Emotee",
   "version": "1.1.0",
+  "manifest_version": 2,
   "description": "Japanese emoticons for Google Chrome",
   "icons": {
     "48": "e48.png",
@@ -12,6 +13,5 @@
     "default_popup": "popup.html"
   },
   "options_page": "options.html",
-  "author": "Nihad Abbasov",
   "homepage_url": "https://github.com/narkoz/emotee"
 }

@@ -79,12 +79,8 @@ random      = (n)     -> Math.floor Math.random() * n
 randSelect  = (array) -> array[random(array.length)]
 
 window.restoreOptions = ->
-  i = 0
-  while i < color.children.length
-    if color[i].value is localStorage['color']
-      color[i].selected = 'true'
-      break
-    i++
+  for i in [0...color.children.length]
+    color[i].selected = 'true' if color[i].value is localStorage['color']
 
 window.saveColor = ->
   if color.value is 'default'

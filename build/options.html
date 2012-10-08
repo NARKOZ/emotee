@@ -7,10 +7,10 @@
       body { padding: 80px 0 0 80px; }
     </style>
   </head>
-  <body onLoad="restoreOptions()">
+  <body id="options">
     <div id="smilie"></div>
     <label for="color">Emotee color:</label>
-    <select id="color" name="color" onChange="saveColor()">
+    <select id="color" name="color">
       <option value="default">default</option>
       <option value="red">red</option>
       <option value="pink">pink</option>
@@ -22,6 +22,6 @@
     </select>
     <p><em>default is random</em></p>
     <p>Feedback: <a href="https://github.com/NARKOZ/emotee/issues">https://github.com/narkoz/emotee/issues</a></p>
-    <script src="app.js" type="text/javascript"></script>
+    <script src="app.js"></script>
   </body>
 </html>

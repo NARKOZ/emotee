@@ -78,18 +78,18 @@ style = elem.style
 random      = (n)     -> Math.floor Math.random() * n
 randSelect  = (array) -> array[random(array.length)]
 
-window.restoreOptions = ->
+restoreOptions = ->
   for i in [0...color.children.length]
     color[i].selected = 'true' if color[i].value is localStorage['color']
 
-window.saveColor = ->
+saveColor = ->
   if color.value is 'default'
     localStorage.removeItem 'color'
   else
     localStorage['color'] = color.value
   generate()
 
-window.generate = ->
+generate = ->
   head        = randSelect c.head
   eyes        = randSelect c.eyes
   cheeks      = randSelect c.cheeks
@@ -103,3 +103,9 @@ window.generate = ->
   ].join ''
 
 generate()
+
+elem.onclick = -> generate()
+
+unless color is null
+  color.onchange = -> saveColor()
+  window.onload = -> restoreOptions()

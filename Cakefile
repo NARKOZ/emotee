@@ -6,7 +6,7 @@ VERSION   = '1.2.0'
 TIMESTAMP = Date.now()
 
 HEADER = """
-/* Copyright (c) 2011-2012 Nihad Abbasov / mail@narkoz.me
+/* Copyright (c) 2011-2013 Nihad Abbasov / mail@narkoz.me
  *
  * Emotee v#{VERSION}, #{TIMESTAMP}
  * https://github.com/narkoz/emotee

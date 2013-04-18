@@ -3,11 +3,11 @@
   "version": "1.2.0",
   "description": "Japanese emoticons for Google Chrome",
   "icons": {
-    "48": "e48.png",
-    "128": "e128.png"
+    "48": "img/e48.png",
+    "128": "img/e128.png"
   },
   "browser_action": {
-    "default_icon": "e.png",
+    "default_icon": "img/e.png",
     "default_title": "Emotee",
     "default_popup": "popup.html"
   },

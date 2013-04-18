@@ -1,0 +1,11 @@
+body {
+  width: 500px;
+  text-align: center;
+}
+#smilie {
+  cursor: pointer;
+  height: 1.5em;
+  font-size: 3em;
+  font-family: 'Lucida Grande', sans-serif;
+  color: 'pink';
+}

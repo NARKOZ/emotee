@@ -5,15 +5,16 @@
 ### Ready
 
 - Install [node.js](http://nodejs.org).
-- Install CoffeeScript and UglifyJS with `npm install coffee-script uglify-js -g`.
+- Install [Grunt](http://gruntjs.com) with `npm install -g grunt-cli`.
 
 ### Set
 
 - Clone Emotee and `cd` into it.
+- Install development dependencies with `npm install`.
 
 ### Go
 
-- Build it via `cake build`.
-- Run continuous builds via `cake watch`.    
+- Build it via `grunt`.
+- Run continuous builds via `grunt watch`.
 
 [![Chrome Web Store](https://code.google.com/chrome/webstore/images/branding/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/ollfjiihaphmpjemfhmkngaajbdblbkb)

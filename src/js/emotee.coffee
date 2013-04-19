@@ -114,7 +114,9 @@ generateEmotee = ->
 
 generateEmotee()
 
-emoticon.onclick = -> generateEmotee()
+emoticon.onclick = ->
+  generateEmotee()
+  copyLink.innerText = 'copy'
 copyLink.onclick = -> copyToClipboard() unless copyLink is null
 
 unless color is null

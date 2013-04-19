@@ -116,8 +116,10 @@ generateEmotee()
 
 emoticon.onclick = ->
   generateEmotee()
-  copyLink.innerText = 'copy'
-copyLink.onclick = -> copyToClipboard() unless copyLink is null
+  copyLink.innerText = 'copy' unless copyLink is null
+
+unless copyLink is null
+  copyLink.onclick = -> copyToClipboard()
 
 unless color is null
   color.onchange = -> saveColor()

@@ -34,6 +34,8 @@ module.exports = (grunt) ->
           'package.json'
           'Gruntfile.coffee'
           'src/js/<%= pkg.name %>.coffee'
+          'src/css/*.css'
+          'src/*.html'
         ]
         tasks: 'default'
 

@@ -74,6 +74,7 @@ c =
 color = document.getElementById 'color'
 elem  = document.getElementById 'smilie'
 style = elem.style
+copy_act = document.getElementById 'copy'
 
 random      = (n)     -> Math.floor Math.random() * n
 randSelect  = (array) -> array[random(array.length)]
@@ -88,6 +89,16 @@ saveColor = ->
   else
     localStorage['color'] = color.value
   generate()
+
+copyToClipboard = ->
+  selection = window.getSelection()
+  range = document.createRange()
+  range.selectNodeContents elem
+  selection.removeAllRanges()
+  selection.addRange range
+  document.execCommand 'Copy'
+  selection.removeAllRanges()
+  copy_act.innerHTML = 'Copied!'
 
 generate = ->
   head        = randSelect c.head
@@ -105,6 +116,8 @@ generate = ->
 generate()
 
 elem.onclick = -> generate()
+if typeof (copy_act) isnt "undefined" and copy_act?
+  copy_act.onclick = -> copyToClipboard()
 
 unless color is null
   color.onchange = -> saveColor()

@@ -2,10 +2,14 @@ body {
   width: 500px;
   text-align: center;
 }
+a {
+  color: #333;
+  outline: none;
+  text-decoration: none;
+}
 #smilie {
   cursor: pointer;
   height: 1.5em;
   font-size: 3em;
   font-family: 'Lucida Grande', sans-serif;
-  color: 'pink';
 }

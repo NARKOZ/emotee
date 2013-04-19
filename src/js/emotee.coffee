@@ -71,13 +71,12 @@ c =
     [ '', ' ', '', '', 'o彡ﾟ' ]
   ]
 
-color = document.getElementById 'color'
-elem  = document.getElementById 'smilie'
-style = elem.style
-copy_act = document.getElementById 'copy'
+color    = document.getElementById 'color'
+emoticon = document.getElementById 'smilie'
+copyLink = document.getElementById 'copy'
 
-random      = (n)     -> Math.floor Math.random() * n
-randSelect  = (array) -> array[random(array.length)]
+random     = (n)     -> Math.floor Math.random() * n
+randSelect = (array) -> array[random(array.length)]
 
 restoreOptions = ->
   for i in [0...color.children.length]
@@ -88,36 +87,35 @@ saveColor = ->
     localStorage.removeItem 'color'
   else
     localStorage['color'] = color.value
-  generate()
+  generateEmotee()
 
-copyToClipboard = ->
-  selection = window.getSelection()
+copyToClipboard =  ->
   range = document.createRange()
-  range.selectNodeContents elem
+  selection = window.getSelection()
+  range.selectNodeContents emoticon
   selection.removeAllRanges()
   selection.addRange range
   document.execCommand 'Copy'
   selection.removeAllRanges()
-  copy_act.innerHTML = 'Copied!'
+  copyLink.innerText = 'Copied!'
 
-generate = ->
-  head        = randSelect c.head
-  eyes        = randSelect c.eyes
-  cheeks      = randSelect c.cheeks
-  mouth       = randSelect c.mouth
-  hands       = randSelect c.hands
-  style.color = if localStorage['color'] then localStorage['color'] else randSelect c.color
+generateEmotee = ->
+  head   = randSelect c.head
+  eyes   = randSelect c.eyes
+  cheeks = randSelect c.cheeks
+  mouth  = randSelect c.mouth
+  hands  = randSelect c.hands
+  emoticon.style.color = if localStorage['color'] then localStorage['color'] else randSelect c.color
 
-  elem.textContent = [
+  emoticon.textContent = [
     hands[0], head[0], hands[1] or (if hands[3] then '' else cheeks[0]), eyes[0], hands[2] or
     mouth, eyes[1], hands[3] or (if hands[1] then '' else cheeks[1]), head[1], hands[4]
   ].join ''
 
-generate()
+generateEmotee()
 
-elem.onclick = -> generate()
-if typeof (copy_act) isnt "undefined" and copy_act?
-  copy_act.onclick = -> copyToClipboard()
+emoticon.onclick = -> generateEmotee()
+copyLink.onclick = -> copyToClipboard() unless copyLink is null
 
 unless color is null
   color.onchange = -> saveColor()

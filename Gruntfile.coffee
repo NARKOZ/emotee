@@ -51,10 +51,19 @@ module.exports = (grunt) ->
       'pkg/js/<%= pkg.name %>.coffee'
     ]
 
+    replace:
+      options:
+        variables:
+          version: '<%= pkg.version %>'
+      files:
+        src: 'src/manifest.json'
+        dest: 'pkg/manifest.json'
+
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-replace'
 
-  grunt.registerTask 'default', ['coffee', 'uglify', 'copy', 'clean']
+  grunt.registerTask 'default', ['coffee', 'uglify', 'copy', 'clean', 'replace']

@@ -1,6 +1,6 @@
 {
   "name": "Emotee",
-  "version": "1.2.0",
+  "version": "@@version",
   "manifest_version": 2,
   "description": "Japanese emoticons for Google Chrome",
   "icons": {

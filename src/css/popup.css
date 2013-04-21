@@ -7,6 +7,14 @@ a {
   outline: none;
   text-decoration: none;
 }
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+.left-side  { float: left; }
+.right-side { float: right; }
+.clear      { clear: both; }
 #smilie {
   cursor: pointer;
   height: 1.5em;

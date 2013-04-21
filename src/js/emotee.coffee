@@ -71,9 +71,10 @@ c =
     [ '', ' ', '', '', 'o彡ﾟ' ]
   ]
 
-color    = document.getElementById 'color'
-emoticon = document.getElementById 'smilie'
-copyLink = document.getElementById 'copy'
+color       = document.getElementById 'color'
+emoticon    = document.getElementById 'smilie'
+copyLink    = document.getElementById 'copy'
+optionsLink = document.getElementById 'options'
 
 random     = (n)     -> Math.floor Math.random() * n
 randSelect = (array) -> array[random(array.length)]
@@ -99,6 +100,16 @@ copyToClipboard =  ->
   selection.removeAllRanges()
   copyLink.innerText = 'Copied!'
 
+openOptionsPage = ->
+  optionsUrl = chrome.extension.getURL 'options.html'
+  chrome.tabs.query
+    url: optionsUrl
+  , (results) ->
+    if results.length
+      chrome.tabs.update results[0].id, active: true
+    else
+      chrome.tabs.create url: optionsUrl
+
 generateEmotee = ->
   head   = randSelect c.head
   eyes   = randSelect c.eyes
@@ -120,6 +131,9 @@ emoticon.onclick = ->
 
 unless copyLink is null
   copyLink.onclick = -> copyToClipboard()
+
+unless optionsLink is null
+  optionsLink.onclick = -> openOptionsPage()
 
 unless color is null
   color.onchange = -> saveColor()

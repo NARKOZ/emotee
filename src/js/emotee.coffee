@@ -87,8 +87,7 @@ saveColor = ->
   if color.value is 'default'
     localStorage.removeItem 'color'
   else
-    localStorage['color'] = color.value
-  generateEmotee()
+    localStorage.setItem 'color', color.value
 
 copyToClipboard =  ->
   range = document.createRange()
@@ -136,5 +135,7 @@ unless optionsLink is null
   optionsLink.onclick = -> openOptionsPage()
 
 unless color is null
-  color.onchange = -> saveColor()
+  color.onchange = ->
+    saveColor()
+    generateEmotee()
   window.onload = -> restoreOptions()

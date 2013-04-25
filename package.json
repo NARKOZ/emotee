@@ -15,8 +15,14 @@
     "type": "git",
     "url": "git://github.com/NARKOZ/emotee.git"
   },
+  "license": {
+    "type": "NYSL",
+    "urls": [
+      "https://github.com/NARKOZ/emotee/blob/master/LICENSE.ja.txt",
+      "https://github.com/NARKOZ/emotee/blob/master/LICENSE.txt"
+    ]
+  },
   "author": "Nihad Abbasov <mail@narkoz.me>",
-  "license": "NYSL",
   "readmeFilename": "README.md",
   "engines": {
     "node": ">=0.8"

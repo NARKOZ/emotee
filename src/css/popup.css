@@ -2,6 +2,9 @@ body {
   width: 500px;
   text-align: center;
 }
+::selection {
+  background-color: transparent;
+}
 a {
   color: #333;
   outline: none;

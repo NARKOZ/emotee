@@ -1,0 +1,24 @@
+2.0.1 (28 April, 2013)
+
+- Fix: hide emotee selection in popup
+
+2.0.0 (21 April, 2013)
+
+- add link to open options page
+- add link to copy generated emotee
+- improve popup and options page design
+- Fix: add black color to options
+- Fix: set manifest version 2
+- use grunt for tasks
+
+1.2.0 (8 October, 2012)
+
+- Fix: use unobtrusive javascript
+
+1.1.0 (29 January, 2012)
+
+- add options page to set generated emotee color
+
+1.0.0 (31 December, 2011)
+
+- initial release

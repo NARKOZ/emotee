@@ -17,4 +17,4 @@
 - Build it via `grunt`.
 - Run continuous builds via `grunt watch`.
 
-[![Chrome Web Store](https://code.google.com/chrome/webstore/images/branding/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/ollfjiihaphmpjemfhmkngaajbdblbkb)
+[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/ollfjiihaphmpjemfhmkngaajbdblbkb)

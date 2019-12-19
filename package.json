@@ -22,7 +22,7 @@
       "https://github.com/NARKOZ/emotee/blob/master/LICENSE.txt"
     ]
   },
-  "author": "Nihad Abbasov <mail@narkoz.me>",
+  "author": "Nihad Abbasov <nihad@42na.in>",
   "readmeFilename": "README.md",
   "engines": {
     "node": ">=0.8"

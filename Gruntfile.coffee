@@ -1,7 +1,7 @@
 module.exports = (grunt) ->
   pkg = grunt.file.readJSON 'package.json'
   banner = """
-/* Copyright (c) 2011-2013 Nihad Abbasov <mail@narkoz.me>
+/* Copyright (c) 2011-2019 Nihad Abbasov <nihad@42na.in>
  *
  * Emotee v<%= pkg.version %>, <%= Date.now() %>
  * https://github.com/narkoz/emotee
